@@ -15,4 +15,4 @@ The website was built using the following technologies:
 
 ## Usage
 
-The page is designed to be responsive and should work well on desktop and mobile devices. You can use the side bar menu to switch between different sections of the page.
+The page is designed to be responsive and should work well on desktop and mobile devices. You can use the sidebar menu to switch between different sections of the page.
