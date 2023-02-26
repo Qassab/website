@@ -9,6 +9,16 @@
   --primary-color: #2f302e;
   --secondary-color: #fff;
 }
+.dark-mood{
+   --primary-color: #fff;
+  --secondary-color: #2f302e;
+}
+.fa-moon{
+  color: #fff;
+}
+.fa-sun{
+  display: none;
+}
 header {
   height: 100vh;
   background: var(--primary-color);
@@ -22,10 +32,14 @@ h1 {
   color: #da143b;
 }
 .header-top {
+  position: fixed;
+  width: 100%;
+  background-color: var(--primary-color);
   height: 70px;
   border-bottom: 1px solid rgb(146, 145, 145);
   display: flex;
   align-items: center;
+  z-index: 11;
 }
 .nav-bar {
   display: flex;
@@ -38,9 +52,9 @@ h1 {
   display: flex;
 }
 
-.header-top {
+/* .header-top {
   position: relative;
-}
+} */
 .header-img {
   position: relative;
   width: 40%;
@@ -159,6 +173,9 @@ h2 {
 }
 
 #history {
+  overflow: hidden;
+  /* background-color: aqua; */
+  background-color: var(--secondary-color);
   min-height: 400px;
 }
 .info-list {
@@ -166,7 +183,7 @@ h2 {
   text-align: center;
 }
 .info-list .active {
-  background-color: #2f302e;
+  background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 .info {
@@ -175,7 +192,7 @@ h2 {
   padding: 20px;
   border: 2px solid #da143b;
   border-radius: 0 25px;
-  background-color: #2f302e;
+  background-color: var(--primary-color);
 
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   visibility: hidden;
@@ -209,6 +226,7 @@ strong {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  
 }
 
 .slide {
@@ -222,11 +240,12 @@ strong {
 
 /* ------- */
 #qualifications {
-  background-color: #2f302e;
+  background-color: var(--primary-color);
   min-height: 300px;
   padding: 30px 0;
   display: flex;
   align-items: center;
+  /* overflow: hidden; */
 }
 #qualifications .content {
   display: flex;
@@ -239,6 +258,7 @@ strong {
   margin: 25px 0;
   border: 2px solid #da143b;
   border-radius: 0 25px;
+  color: var(--primary-color);
   background-color: var(--secondary-color);
 }
 #qualifications img {
@@ -247,12 +267,13 @@ strong {
   border-radius: 0 25px;
 }
 #programing {
+  background-color: var(--secondary-color);
   min-height: 60vh;
   display: flex;
   align-items: center;
 }
 #programing p {
-  background-color: #2f302e;
+  background-color: var(--primary-color);
   color: var(--secondary-color);
   padding: 30px;
 }
@@ -262,12 +283,11 @@ footer {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  background-color: #2f302e;
+  background-color: var(--primary-color);
 }
 
 footer .content {
   text-align: center;
-
   color: var(--secondary-color);
 }
 
@@ -285,6 +305,12 @@ footer .content input {
   font-size: 15px;
   border-radius: 25px;
   border: none;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+footer .content input::placeholder{
+  color: var(--primary-color);
+
 }
 footer .signUp {
   position: absolute;

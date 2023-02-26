@@ -32,16 +32,32 @@ btns.forEach(function (btn) {
 ///////////slider
 const slides = document.querySelectorAll(".slide");
 
-let currentSlide = 0
+let currentSlide = 0;
 
-function showSlide(){
-  slides.forEach((slide)=>slide.classList.remove("active"))
-  currentSlide++
-  if(currentSlide>slides.length){
-    currentSlide  =1
-
+function showSlide() {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  currentSlide++;
+  if (currentSlide > slides.length) {
+    currentSlide = 1;
   }
-  slides[currentSlide -1].classList.add("active")
-  setTimeout(showSlide,5000)
+  slides[currentSlide - 1].classList.add("active");
+  setTimeout(showSlide, 5000);
 }
-showSlide()
+showSlide();
+///////dark-mode
+
+const toggleMood = (e) => {
+  document.body.classList.toggle("dark-mood");
+  const moon = document.querySelector(".fa-moon");
+  const sun = document.querySelector(".fa-sun");
+  if (e.target === moon) {
+    moon.style.display = "none";
+    sun.style.display = "block";
+  } else if (e.target === sun) {
+    moon.style.display = "block";
+    sun.style.display = "none";
+  }
+};
+
+const moodToggler = document.querySelectorAll(".mood-toggler");
+moodToggler.forEach((change) => change.addEventListener("click", toggleMood));
