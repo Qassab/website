@@ -345,8 +345,17 @@ footer .content span {
   .header-img {
     width: 100%;
   }
+  .header-content{
+    position: relative;
+  }
   .header-description {
     width: 100%;
+    position: absolute;
+  }
+  
+  .header-description p{
+    letter-spacing: 0;
+    line-height: 1;
   }
   #history {
     height: 500px;
@@ -368,3 +377,13 @@ footer .content span {
     padding: 0 2px;
   }
 }
+
+@media (max-width: 820px),(max-width: 912px){
+.nav-bar .nav-list {
+    display: none;
+  }
+  .side-bar {
+    display: block;
+  }
+}
+
